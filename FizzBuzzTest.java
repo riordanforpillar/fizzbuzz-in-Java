@@ -40,7 +40,11 @@ public class FizzBuzzTest {
 	public void testMultipleOfFive() {
 		assertTrue(fb.isMultipleFive(5));
 		assertFalse(fb.isMultipleFive(6));
-
 	}
-
+	
+	@Test
+	public void testMutipleOfThreeString() {
+		assertEquals("fizz", fb.getString(3));
+	}
+	
 }

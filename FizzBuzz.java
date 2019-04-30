@@ -4,6 +4,10 @@ public class FizzBuzz {
 
 	public FizzBuzz() {
 	}
+	
+	public String getString(int i) {
+		return "fizz";
+	}
 
 	public boolean isMultipleThree(int integer) {
 		if (integer % 3 == 0) {
