@@ -72,13 +72,15 @@ public class FizzBuzzTest {
 	
 	@Test
 	public void testRunString() {
-		assertEquals("1 2 fizz 4 buzz fizz 7", fb.runString(7));
-		assertEquals("1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz 16", fb.runString(16));
+		assertEquals("1 2 fizz 4 buzz fizz 7", fb.generateString(7));
+		assertEquals("1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz 16", fb.generateString(16));
 	}
 	
 	@Test
 	public void testGenerateStringWithPassedNumberOfSteps() {
-		FizzBuzz withNSteps = new FizzBuzz(8);
-		assertEquals("1 2 fizz 4 buzz fizz 7 8", withNSteps.generateString());
+		FizzBuzz with8Steps = new FizzBuzz(8);
+		assertEquals("1 2 fizz 4 buzz fizz 7 8", with8Steps.generateString());
+		FizzBuzz with6Steps = new FizzBuzz(6);
+		assertEquals("1 2 fizz 4 buzz fizz", with6Steps.generateString());
 	}
 }

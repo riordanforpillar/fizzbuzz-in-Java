@@ -1,14 +1,16 @@
 package fizzbuzz;
 
 public class FizzBuzz {
+	private int stringSteps;
 
 	public FizzBuzz() {
 	}
 
 	public FizzBuzz(int nSteps) {
+		stringSteps = nSteps;
 	}	
 	
-	public String runString(int nSteps) {
+	public String generateString(int nSteps) {
 		String generated = "";
 		for(int index = 1; index < nSteps; index++) {
 			generated += getString(index) + " ";
@@ -19,7 +21,7 @@ public class FizzBuzz {
 	}
 	
 	public String generateString() {
-		return "1 2 fizz 4 buzz fizz 7 8";
+		return generateString(stringSteps);
 	}
 
 	public String getString(int i) {
