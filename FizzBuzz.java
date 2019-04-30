@@ -68,8 +68,8 @@ public class FizzBuzz {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		FizzBuzz fb = new FizzBuzz(22);
+		System.out.println(fb.generateString());
 	}
 
 }
