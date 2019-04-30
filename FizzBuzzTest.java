@@ -64,4 +64,9 @@ public class FizzBuzzTest {
 	public void testMultipleOfThreeAndFive() {
 		assertEquals("fizzbuzz", fb.getString(15));
 	}
+	
+	@Test
+	public void testRunString() {
+		assertEquals("1 2 fizz 4 buzz fizz 7", fb.runString(7));
+	}
 }
