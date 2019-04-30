@@ -1,10 +1,8 @@
 package fizzbuzz;
 
 class NegativeFizzBuzz extends RuntimeException{
-	private String exceptionMessage;
-	public NegativeFizzBuzz(String message) {
-		exceptionMessage = message;
-	}
+	public NegativeFizzBuzz() {};
+	static final long serialVersionUID = 0;
 }
 
 public class FizzBuzz {
@@ -16,7 +14,7 @@ public class FizzBuzz {
 
 	public FizzBuzz(int nSteps) {
 		if(nSteps < 0) {
-			throw new NegativeFizzBuzz("Negative number of steps given");
+			throw new NegativeFizzBuzz();
 		}
 		stringSteps = nSteps;
 	}	
@@ -36,6 +34,10 @@ public class FizzBuzz {
 	}
 
 	public String getString(int i) {
+		if( i < 0 ) {
+			throw new NegativeFizzBuzz();
+		}
+		
 		String returnString = String.valueOf(i);
 		if (isMultipleThree(i)) {
 			returnString = "fizz";

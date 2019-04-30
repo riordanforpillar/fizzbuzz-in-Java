@@ -2,8 +2,6 @@ package fizzbuzz;
 
 import static org.junit.Assert.*;
 
-import fizzbuzz.*;
-import junit.framework.Assert;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -32,7 +30,7 @@ public class FizzBuzzTest {
 	
 	@Test
 	public void testAcceptStepsInConstructor() {
-		FizzBuzz withNSteps = new FizzBuzz(3);
+		new FizzBuzz(3);
 	}
 
 	@Test
@@ -90,7 +88,12 @@ public class FizzBuzzTest {
 	}
 	
 	@Test (expected = NegativeFizzBuzz.class)
-	public void testNegativeStringException() {
+	public void testNegativeConstructorException() {
 		new FizzBuzz(-1);
+	}
+
+	@Test (expected = NegativeFizzBuzz.class)
+	public void testNegativeStringException() {
+		fb.generateString(-1);
 	}
 }
