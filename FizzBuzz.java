@@ -6,13 +6,14 @@ public class FizzBuzz {
 	}
 
 	public String getString(int i) {
-		if (i == 3) {
-			return "fizz";
+		String returnString = "7";
+		if (isMultipleThree(i)) {
+			returnString = "fizz";
 		}
 		if (i == 20) {
-			return "buzz";
+			returnString = "buzz";
 		}
-		return "Not this";
+		return returnString;
 	}
 
 	public boolean isMultipleThree(int integer) {
