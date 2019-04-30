@@ -1,12 +1,23 @@
 package fizzbuzz;
 
+class NegativeFizzBuzz extends RuntimeException{
+	private String exceptionMessage;
+	public NegativeFizzBuzz(String message) {
+		exceptionMessage = message;
+	}
+}
+
 public class FizzBuzz {
 	private int stringSteps;
 
 	public FizzBuzz() {
+		stringSteps = 1;
 	}
 
 	public FizzBuzz(int nSteps) {
+		if(nSteps < 0) {
+			throw new NegativeFizzBuzz("Negative number of steps given");
+		}
 		stringSteps = nSteps;
 	}	
 	
@@ -60,3 +71,5 @@ public class FizzBuzz {
 	}
 
 }
+
+

@@ -83,4 +83,14 @@ public class FizzBuzzTest {
 		FizzBuzz with6Steps = new FizzBuzz(6);
 		assertEquals("1 2 fizz 4 buzz fizz", with6Steps.generateString());
 	}
+	
+	@Test
+	public void testDefaultString() {
+		assertEquals("1", fb.generateString());
+	}
+	
+	@Test (expected = NegativeFizzBuzz.class)
+	public void testNegativeStringException() {
+		new FizzBuzz(-1);
+	}
 }
