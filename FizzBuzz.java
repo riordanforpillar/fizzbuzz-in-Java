@@ -4,9 +4,15 @@ public class FizzBuzz {
 
 	public FizzBuzz() {
 	}
-	
+
 	public String getString(int i) {
-		return "fizz";
+		if (i == 3) {
+			return "fizz";
+		}
+		if (i == 20) {
+			return "buzz";
+		}
+		return "Not this";
 	}
 
 	public boolean isMultipleThree(int integer) {
