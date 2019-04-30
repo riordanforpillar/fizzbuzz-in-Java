@@ -6,7 +6,7 @@ public class FizzBuzz {
 	}
 
 	public String getString(int i) {
-		String returnString = "7";
+		String returnString = String.valueOf(i);
 		if (isMultipleThree(i)) {
 			returnString = "fizz";
 		}

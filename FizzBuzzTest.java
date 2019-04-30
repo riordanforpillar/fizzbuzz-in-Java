@@ -56,5 +56,6 @@ public class FizzBuzzTest {
 	@Test
 	public void testNotMultipleString() {
 		assertEquals("7", fb.getString(7));
+		assertEquals("1", fb.getString(1));
 	}
 }
