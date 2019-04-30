@@ -29,6 +29,11 @@ public class FizzBuzzTest {
 	@After
 	public void tearDown() throws Exception {
 	}
+	
+	@Test
+	public void testAcceptStepsInConstructor() {
+		FizzBuzz withNSteps = new FizzBuzz(3);
+	}
 
 	@Test
 	public void testMultipleOfThree() {
@@ -68,5 +73,12 @@ public class FizzBuzzTest {
 	@Test
 	public void testRunString() {
 		assertEquals("1 2 fizz 4 buzz fizz 7", fb.runString(7));
+		assertEquals("1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz 16", fb.runString(16));
+	}
+	
+	@Test
+	public void testGenerateStringWithPassedNumberOfSteps() {
+		FizzBuzz withNSteps = new FizzBuzz(8);
+		assertEquals("1 2 fizz 4 buzz fizz 7 8", withNSteps.generateString());
 	}
 }

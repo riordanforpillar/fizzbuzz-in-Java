@@ -4,9 +4,18 @@ public class FizzBuzz {
 
 	public FizzBuzz() {
 	}
+
+	public FizzBuzz(int nSteps) {
+	}	
 	
-	public String runString(int i) {
-		return "1 2 fizz 4 buzz fizz 7";
+	public String runString(int nSteps) {
+		String generated = "";
+		for(int index = 1; index < nSteps; index++) {
+			generated += getString(index) + " ";
+		}
+		generated += getString(nSteps);
+		
+		return generated;
 	}
 
 	public String getString(int i) {
