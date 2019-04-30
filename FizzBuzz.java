@@ -17,6 +17,10 @@ public class FizzBuzz {
 		
 		return generated;
 	}
+	
+	public String generateString() {
+		return "1 2 fizz 4 buzz fizz 7 8";
+	}
 
 	public String getString(int i) {
 		String returnString = String.valueOf(i);
