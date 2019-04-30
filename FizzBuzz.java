@@ -10,8 +10,11 @@ public class FizzBuzz {
 		if (isMultipleThree(i)) {
 			returnString = "fizz";
 		}
-		if (i == 20) {
+		if (isMultipleFive(i)) {
 			returnString = "buzz";
+		}
+		if (isMultipleThree(i) && isMultipleFive(i)) {
+			returnString = "fizzbuzz";
 		}
 		return returnString;
 	}

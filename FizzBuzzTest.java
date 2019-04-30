@@ -50,6 +50,7 @@ public class FizzBuzzTest {
 	
 	@Test
 	public void testMultipleOfFiveString() {
+		assertEquals("buzz", fb.getString(5));
 		assertEquals("buzz", fb.getString(20));
 	}
 	
@@ -57,5 +58,10 @@ public class FizzBuzzTest {
 	public void testNotMultipleString() {
 		assertEquals("7", fb.getString(7));
 		assertEquals("1", fb.getString(1));
+	}
+	
+	@Test
+	public void testMultipleOfThreeAndFive() {
+		assertEquals("fizzbuzz", fb.getString(15));
 	}
 }
